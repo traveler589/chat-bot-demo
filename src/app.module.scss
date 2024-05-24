@@ -1,0 +1,67 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  :global {
+    .icon {
+      width: 48px;
+      height: 48px;
+      padding: 6px;
+      border-radius: 50%;
+      border: 1px #e5e5e5 solid;
+    }
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    margin: 10px 0 0;
+  }
+}
+
+.foot {
+  padding: 10px;
+}
+
+.submit {
+  min-width: initial !important;
+  padding: 5px !important;
+}
+
+.stop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #fff;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .app {
+    max-width: 80vw;
+  }
+}

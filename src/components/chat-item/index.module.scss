@@ -1,0 +1,69 @@
+.chatItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 50%;
+  &:global(.You) {
+    background-color: #ffbe00;
+  }
+  &:global(.ChatGPT) {
+    background-color: #00cc80;
+  }
+  svg {
+    color: #fff;
+  }
+}
+
+.panel {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.role {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 10px;
+  line-height: 20px;
+  color: #666;
+}
+
+.loading {
+  display: inline-block;
+  padding: 2px;
+  vertical-align: top;
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #0d0d0d;
+    animation: breathe 1.5s infinite linear;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
